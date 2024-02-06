@@ -7,16 +7,16 @@ void	ft_putchar(char c)
 
 void	print_bits(unsigned char octet)
 {
-	int				idx;
+	int				i;
 	unsigned char	mask;
 	unsigned char	bit;
 
-	idx = 7;
+	i = 7;
 	mask = 1;
-	while (idx >= 0)
+	while (i >= 0)
 	{
-		bit = (((octet >> idx) & mask) + '0');
+		bit = (((octet >> i) & mask) + '0');
 		ft_putchar(bit);
-		idx--;
+		i--;
 	}
 }
